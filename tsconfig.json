@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist", // Выходной каталог
+    "sourceMap": true, // Исходные карты
+    "noImplicitAny": true, // Отмена любого типа
+    "module": "esnext", // Модульная система
+    //"target" : "esnext",
+    "allowSyntheticDefaultImports": true, // Разрешить импорты по умолчанию
+    "experimentalDecorators": true, // Включить экспериментальный синтаксис декораторов
+    "emitDecoratorMetadata": true, // Включает экспериментальную поддержку выдачи метаданных
+    "resolveJsonModule": true, // Позволяет импортировать модули с расширением «.json»
+    "allowJs": true, // Разрешить импортировать файлы JavaScript
+    "checkJs": true, // Ошибки сообщаются в файлах JavaScript
+    "removeComments": true, // Удаляет комментарии при преобразовании в JavaScript
+    "strictNullChecks": true, // строгая проверка null и undefined
+    "esModuleInterop": true, // Взаимодействие модулей ES
+    "alwaysStrict": true, // Строгий режим для каждого файла
+    "strictPropertyInitialization": true, // Строгая инициализация свойства
+    "noFallthroughCasesInSwitch": true, // Использовать либо break, либо return в switch
+    "noImplicitReturns": true, // Без неявных возвратов
+    "noUnusedLocals": true, // Запретить неиспользуемые локальные переменные
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    // Эти имена файлов разрешаются относительно каталога
+    "src/**/*"
+  ],
+  "exclude": [
+    // Задает массив имен файлов или шаблонов, которые следует пропустить при разрешении include
+    "**/*.spec.ts"
+  ],
+}
