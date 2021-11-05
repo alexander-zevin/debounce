@@ -4,8 +4,6 @@
     "outDir": "./dist", // Выходной каталог
     "sourceMap": true, // Исходные карты
     "noImplicitAny": true, // Отмена любого типа
-    "module": "esnext", // Модульная система
-    //"target" : "esnext",
     "allowSyntheticDefaultImports": true, // Разрешить импорты по умолчанию
     "experimentalDecorators": true, // Включить экспериментальный синтаксис декораторов
     "emitDecoratorMetadata": true, // Включает экспериментальную поддержку выдачи метаданных
@@ -21,7 +19,6 @@
     "noImplicitReturns": true, // Без неявных возвратов
     "noUnusedLocals": true, // Запретить неиспользуемые локальные переменные
     "declaration": true,
-    "strict": true,
     "moduleResolution": "node"
   },
   "include": [

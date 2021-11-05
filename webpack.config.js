@@ -19,7 +19,7 @@ module.exports = (_, argv) => {
       libraryExport: 'default',
       libraryTarget: 'umd',
       umdNamedDefine: true,
-      globalObject: 'this',
+      globalObject: 'typeof self === \'undefined\' ? this : self',
     },
     resolve: {
       extensions: ['*', '.ts', '.js', '.json'],
@@ -27,10 +27,7 @@ module.exports = (_, argv) => {
     devtool: isProductionMode ? false : 'inline-source-map',
     optimization: {
       minimize: true,
-      minimizer: [
-        new TerserPlugin({ parallel: true }),
-        new JsonMinimizerPlugin(),
-      ],
+      minimizer: [new TerserPlugin({ parallel: true }), new JsonMinimizerPlugin()],
       splitChunks: {
         chunks: 'all',
       },
@@ -40,9 +37,7 @@ module.exports = (_, argv) => {
         {
           test: /\.(js|jsx|tsx|ts)$/,
           exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-          },
+          use: ['babel-loader', 'ts-loader'],
         },
       ],
     },

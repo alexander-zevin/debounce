@@ -35,7 +35,7 @@ module.exports = {
     'no-multi-spaces': 1, //запретить использование нескольких пробелов
     'no-unused-expressions': 1, //запретить неиспользуемые выражения
     'require-await': 2, //запретить async функции, у которых нет выражения await
-    "quotes": ["error", "single"],
+    'quotes': ['error', 'single'],
     'no-duplicate-imports': 1,
   },
   reportUnusedDisableDirectives: true, //сообщить о неиспользованных eslint-disable комментариях
