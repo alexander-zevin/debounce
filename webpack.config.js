@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const JsonMinimizerPlugin = require('json-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (_, argv) => {
   const isProductionMode = argv.mode === 'production';
@@ -46,6 +47,11 @@ module.exports = (_, argv) => {
       new ESLintPlugin({
         extensions: ['ts', 'tsx', 'js', 'jsx'],
       }),
+      new CopyPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, 'README.md') }
+        ]
+      })
     ],
   };
 };
